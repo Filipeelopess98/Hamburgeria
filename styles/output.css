@@ -596,10 +596,6 @@ video {
   margin-bottom: 1rem;
 }
 
-.mb-6 {
-  margin-bottom: 1.5rem;
-}
-
 .mt-2 {
   margin-top: 0.5rem;
 }
@@ -622,6 +618,10 @@ video {
 
 .mt-9 {
   margin-top: 2.25rem;
+}
+
+.mt-16 {
+  margin-top: 4rem;
 }
 
 .block {
@@ -775,7 +775,7 @@ video {
 }
 
 .bg-home {
-  background-image: url('/assets/bg.png');
+  background-image: url('/assets/fundo01.png');
 }
 
 .bg-cover {
@@ -814,14 +814,13 @@ video {
   padding-bottom: 0.25rem;
 }
 
-.py-2 {
-  padding-top: 0.5rem;
-  padding-bottom: 0.5rem;
-}
-
 .py-3 {
   padding-top: 0.75rem;
   padding-bottom: 0.75rem;
+}
+
+.pb-10 {
+  padding-bottom: 2.5rem;
 }
 
 .text-center {
@@ -872,6 +871,11 @@ video {
 .text-red-500 {
   --tw-text-opacity: 1;
   color: rgb(239 68 68 / var(--tw-text-opacity));
+}
+
+.text-red-700 {
+  --tw-text-opacity: 1;
+  color: rgb(185 28 28 / var(--tw-text-opacity));
 }
 
 .text-white {

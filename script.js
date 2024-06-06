@@ -125,7 +125,7 @@ checkoutBtn.addEventListener("click", function (event) {
     if (!isOpen) {
 
         Toastify({
-            text: "Ops, a loja está fechada no momento.",
+            text: "Loja Fechada • Abre ás 18:00",
             duration: 3000,
             close: true,
             gravity: "top",
@@ -173,9 +173,9 @@ const spanItem = document.getElementById("datespan");
 const isOpen = checkRestaurantOpen();
 
 if (isOpen) {
-    spanItem.textContent = "Loja Aberta | 18:00 às 23:00";
+    spanItem.textContent = "Loja aberta • 18:00 às 23:00";
     spanItem.style.backgroundColor = "#10B981";
 } else {
-    spanItem.textContent = "Loja Fechada - Abre às 18:00";
+    spanItem.textContent = "Loja fechada • Abre às 18:00";
     spanItem.style.backgroundColor = "#EF4444";
 }
