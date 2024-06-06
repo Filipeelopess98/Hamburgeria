@@ -169,15 +169,13 @@ function checkRestaurantOpen() {
 
 
 }
-
-const spanItem = document.getElementById("date-span");
+const spanItem = document.getElementById("datespan");
 const isOpen = checkRestaurantOpen();
 
 if (isOpen) {
     spanItem.textContent = "Loja Aberta | 18:00 às 23:00";
-    spanItem.classList.remove("bg-red-500");
-    spanItem.classList.add("bg-green-600");
+    spanItem.style.backgroundColor = "#10B981";
 } else {
     spanItem.textContent = "Loja Fechada - Abre às 18:00";
-    spanItem.classList.add("bg-red-600");
+    spanItem.style.backgroundColor = "#EF4444";
 }
