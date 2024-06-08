@@ -627,13 +627,25 @@
                 <p id="address-warn" class="text-red-500 text-medium mt-3 font-bold hidden">Por favor, digite o seu
                     endereço!</p>
             </div>
+            <div class="mt-4">
+                <label for="payment-method" class="block mb-2 font-semibold">Forma de pagamento:</label>
+                <select id="payment-method" class="w-full p-2 border border-gray-300 rounded-lg">
+                    <option value="" disabled selected>Selecione uma forma de pagamento</option>
+                    <option value="Pix">PIX</option>
+                    <option value="Dinheiro">Dinheiro</option>
+                    <option value="Credito">Cartão de Crédito</option>
+                    <option value="Debito">Cartão de Débito</option>
+                </select>
+                <p id="payment-warn" class="text-red-500 text-medium mt-3 font-bold hidden">Por favor, selecione uma
+                    forma de pagamento!</p>
+            </div>
             <div class="flex justify-between items-center mt-6">
                 <button id="close-modal-btn" class="bg-red-600 text-white px-4 py-3 rounded-lg">Fechar</button>
                 <button id="checkout-btn" class="bg-green-500 text-white px-4 py-3 rounded-lg">Finalizar pedido</button>
             </div>
-
         </div>
     </div>
+
     <br>
     <br>
 

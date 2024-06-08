@@ -8,6 +8,8 @@ const closeModalBtn = document.getElementById("close-modal-btn");
 const cartCounter = document.getElementById("cart-count");
 const addressInput = document.getElementById("address");
 const addressWarn = document.getElementById("address-warn");
+const paymentMethodSelect = document.getElementById("payment-method");
+const paymentWarn = document.getElementById("payment-warn");
 
 let cart = [];
 
@@ -110,22 +112,24 @@ function removeItemCart(name) {
 addressInput.addEventListener("input", function (event) {
     let inputValue = event.target.value;
     if (inputValue !== "") {
-        addressInput.classList.remove("border-red-500")
-        addressWarn.classList.add("hidden")
+        addressInput.classList.remove("border-red-500");
+        addressWarn.classList.add("hidden");
     }
-
-
 });
 
+paymentMethodSelect.addEventListener("change", function (event) {
+    let selectedValue = event.target.value;
+    if (selectedValue !== "") {
+        paymentMethodSelect.classList.remove("border-red-500");
+        paymentWarn.classList.add("hidden");
+    }
+});
 
 checkoutBtn.addEventListener("click", function (event) {
-
-
     const isOpen = checkRestaurantOpen();
     if (!isOpen) {
-
         Toastify({
-            text: "Loja Fechada • Abre ás 18:00",
+            text: "Loja Fechada • Abre às 18:00",
             duration: 3000,
             close: true,
             gravity: "top",
@@ -134,31 +138,41 @@ checkoutBtn.addEventListener("click", function (event) {
             style: {
                 background: "#ef4444",
             },
-
         }).showToast();
-
         return;
     }
 
     if (cart.length === 0) return;
+
+    let valid = true;
+
     if (addressInput.value === "") {
-        addressWarn.classList.remove("hidden")
-        addressInput.classList.add("border-red-500")
-        return;
+        addressWarn.classList.remove("hidden");
+        addressInput.classList.add("border-red-500");
+        valid = false;
     }
 
+    const paymentMethod = paymentMethodSelect.value;
+    if (paymentMethod === "") {
+        paymentWarn.classList.remove("hidden");
+        paymentMethodSelect.classList.add("border-red-500");
+        valid = false;
+    }
+
+    if (!valid) return;
+
     const cartItems = cart.map((item) => {
-        return (
-            `${item.name} Quantidade (${item.quantity}) Preço: R$ ${item.price.toFixed(2)} |`
-        )
+        return `${item.name} Quantidade (${item.quantity}) Preço: R$ ${item.price.toFixed(2)} |`;
+    }).join("");
 
-    }).join("")
-    const message = encodeURI(cartItems)
-    const phone = "1998275-9005"
+    const message = encodeURI(cartItems);
+    const phone = "1981979935";
+    const fullMessage = `${message} Endereço: ${addressInput.value} Forma de Pagamento: ${paymentMethod}`;
 
-    window.open(`https://wa.me/${phone}?text=${message} Endereço: ${addressInput.value}`, "blank")
+    window.open(`https://wa.me/${phone}?text=${fullMessage}`, "_blank");
     cart = [];
-    addressInput.value = [];
+    addressInput.value = "";
+    paymentMethodSelect.value = "";
     updateCartModal();
 });
 
@@ -166,9 +180,8 @@ function checkRestaurantOpen() {
     const data = new Date();
     const hora = data.getHours();
     return hora >= 18 && hora < 23;
-
-
 }
+
 const spanItem = document.getElementById("datespan");
 const isOpen = checkRestaurantOpen();
 
@@ -179,4 +192,3 @@ if (isOpen) {
     spanItem.textContent = "Loja fechada • Abre às 18:00";
     spanItem.style.backgroundColor = "#EF4444";
 }
-
