@@ -193,3 +193,4 @@ if (isOpen) {
     spanItem.textContent = "Loja fechada • Abre às 18:00";
     spanItem.style.backgroundColor = "#EF4444";
 }
+
