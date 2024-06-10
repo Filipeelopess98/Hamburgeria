@@ -162,12 +162,13 @@ checkoutBtn.addEventListener("click", function (event) {
     if (!valid) return;
 
     const cartItems = cart.map((item) => {
-        return `${item.name} Quantidade (${item.quantity}) Preço: R$ ${item.price.toFixed(2)} |`;
+        return `${item.name}  Informações do Pedido: <strong>Quantidade:</strong> (${item.quantity}) <strong>Preço: R$</strong>  ${item.price.toFixed(2)} |`;
     }).join("");
 
     const message = encodeURI(cartItems);
     const phone = "1981979935";
-    const fullMessage = `${message} Endereço: ${addressInput.value} Forma de Pagamento: ${paymentMethod}`;
+    const fullMessage = `${message} <strong>Endereço:</strong> ${addressInput.value} | <strong>Forma de Pagamento:</strong> ${paymentMethod}`;
+
 
     window.open(`https://wa.me/${phone}?text=${fullMessage}`, "_blank");
     cart = [];
