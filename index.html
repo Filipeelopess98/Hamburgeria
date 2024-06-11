@@ -40,6 +40,10 @@
             <div class="px-4 py-1 rounded-lg mt-5 text-white font-medium  shadow-lg p-6 bg-white mt-4 " id="datespan">
                 <span> Segunda á Domingo - 18:00 ás 23:00</span>
             </div>
+            <div class="bg-white text-black font-bold rounded-lg mt-2 font-normal shadow-lg p-1" id="delivery-info"
+                style="display: none;">
+                Tempo de entrega: 30-45 minutos
+            </div>
 
         </div>
     </header>
@@ -51,6 +55,49 @@
 
     <div id="menu">
         <main class="grid grid-cols-1 md:grid-cols-2 gap-7 md:gap-10 mx-auto max-w-7xl px-2 mb-16">
+
+            <div class="flex gap-2">
+                <img src="./assets/Roots Fish Filet.jpg" alt="Roots Fish Filet"
+                    class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300">
+
+                <div>
+                    <p class="font-bold">Roots Fish Filet</p>
+                    <p class="text-sm">Filé de tilápia empanado crocante, coberto com a maionese especial da casa,
+                        picles e alface crocante, servido no pão brioche.</p>
+                    <div class="flex items-center gap-2 justify-between mt-3">
+                        <p class="font-bold text-lg">R$ 26.90</p>
+                        <button class="bg-gray-900 px-5 rounded add-to-cart-btn" data-name="Roots Fish Filet"
+                            data-price="26.90">
+                            <i class="fa fa-cart-plus text-lg text-white"> </i>
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="flex gap-2">
+                <img src="./assets/BBQ Roots Pulled Pork.jpg" alt="BBQ Roots Pulled Pork"
+                    class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300">
+
+                <div>
+                    <p class="font-bold">BBQ Roots Pulled Pork</p>
+                    <p class="text-sm">Carne de porco desfiada e cozida lentamente no molho barbecue, com
+                        repolho roxo e maionese de alho da casa, e servido no pão brioche.</p>
+                    <div class="flex items-center gap-2 justify-between mt-3">
+                        <p class="font-bold text-lg">R$ 31.90</p>
+                        <button class="bg-gray-900 px-5 rounded add-to-cart-btn" data-name="BBQ Roots Pulled Pork"
+                            data-price="31.90">
+                            <i class="fa fa-cart-plus text-lg text-white"> </i>
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+
+
+
+
+
 
             <div class="flex gap-2">
                 <img src="./assets/hamb-1.png" alt="Roots Smash"
@@ -209,6 +256,7 @@
                     </div>
                 </div>
 
+
             </div>
         </main>
 
@@ -223,7 +271,7 @@
                     class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300">
 
                 <div class="w-full">
-                    <p class="font-bold">Batata Frita Média</p>
+                    <p class="font-bold">Batata Frita</p>
                     <div class="flex items-center gap-2 justify-between mt-2">
 
                         <p class="font-bold text-lg">R$ 14.90</p>
@@ -256,10 +304,10 @@
                     class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300">
 
                 <div class="w-full">
-                    <p class="font-bold">Onion rings</p>
+                    <p class="font-bold"> Roots Onion Rings</p>
                     <div class="flex items-center gap-2 justify-between mt-2">
                         <p class="font-bold text-lg">R$ 14.90</p>
-                        <button class="bg-gray-900 px-5 rounded add-to-cart-btn" data-name="Onion rings"
+                        <button class="bg-gray-900 px-5 rounded add-to-cart-btn" data-name="Roots Onion Rings"
                             data-price="14.90">
                             <i class="fa fa-cart-plus text-lg text-white"></i>
                         </button>
@@ -267,15 +315,15 @@
                 </div>
             </div>
             <div class="flex gap-2 w-full">
-                <img src="./porcoes/chicek supreme.png" alt="Chicken Supreme"
+                <img src="./porcoes/chicek supreme.png" alt="Roots Frango Crispy"
                     class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300">
 
                 <div class="w-full">
-                    <p class="font-bold">Chicken Supreme C/ 10 unidades</p>
+                    <p class="font-bold">Roots Frango Crispy C/ 10 unidades</p>
                     <div class="flex items-center gap-2 justify-between mt-2">
-                        <p class="font-bold text-lg">R$ 16.90</p>
-                        <button class="bg-gray-900 px-5 rounded add-to-cart-btn"
-                            data-name="Chicken Supreme C/ 10 unidades" data-price="16.90">
+                        <p class="font-bold text-lg">R$ 18.90</p>
+                        <button class="bg-gray-900 px-5 rounded add-to-cart-btn" data-name="Roots Frango Crispy"
+                            data-price="18.90">
                             <i class="fa fa-cart-plus text-lg text-white"></i>
                         </button>
                     </div>
@@ -283,15 +331,15 @@
             </div>
 
             <div class="flex gap-2 w-full">
-                <img src="./porcoes/palitos-queijo.jpg" alt="Palitos de Queijo"
+                <img src="./porcoes/palitos-queijo.jpg" alt="Roots Mozzarella Sticks"
                     class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300">
 
                 <div class="w-full">
-                    <p class="font-bold">Palitos de Queijo C/ 6 Unidades</p>
+                    <p class="font-bold">Roots Mozzarella Sticks</p>
                     <div class="flex items-center gap-2 justify-between mt-2">
                         <p class="font-bold text-lg">R$ 15.90</p>
-                        <button class="bg-gray-900 px-5 rounded add-to-cart-btn"
-                            data-name="Palitos de Queijo C/ 6 Unidades" data-price="15.90">
+                        <button class="bg-gray-900 px-5 rounded add-to-cart-btn" data-name="Roots Mozzarella Sticks"
+                            data-price="15.90">
                             <i class="fa fa-cart-plus text-lg text-white"></i>
                         </button>
                     </div>
@@ -321,9 +369,9 @@
                 <div class="w-full">
                     <p class="font-bold">Coxinha de Frango C/ 10 Unidades </p>
                     <div class="flex items-center gap-2 justify-between mt-2">
-                        <p class="font-bold text-lg">R$ 12.90</p>
+                        <p class="font-bold text-lg">R$ 14.90</p>
                         <button class="bg-gray-900 px-5 rounded add-to-cart-btn"
-                            data-name="Coxinha de Frango C/ 10 Unidades" data-price="12.90">
+                            data-name="Coxinha de Frango C/ 10 Unidades" data-price="14.90">
                             <i class="fa fa-cart-plus text-lg text-white"></i>
                         </button>
                     </div>
@@ -346,7 +394,36 @@
                 </div>
             </div>
 
+            <div class="flex gap-2 w-full">
+                <img src="./Porcoes/mandioca frita.jpg" alt="Mandioca Frita"
+                    class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300">
 
+                <div class="w-full">
+                    <p class="font-bold">Mandioca Frita</p>
+                    <div class="flex items-center gap-2 justify-between mt-2">
+                        <p class="font-bold text-lg">R$ 16.90</p>
+                        <button class="bg-gray-900 px-5 rounded add-to-cart-btn" data-name="Mandioca Frita"
+                            data-price="16.90">
+                            <i class="fa fa-cart-plus text-lg text-white"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="flex gap-2 w-full">
+                <img src="./Porcoes/iscas de peixe.jpg" alt="Roots Crispy Fish"
+                    class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300">
+
+                <div class="w-full">
+                    <p class="font-bold"> Roots Crispy Fish</p>
+                    <div class="flex items-center gap-2 justify-between mt-2">
+                        <p class="font-bold text-lg">R$ 21.90</p>
+                        <button class="bg-gray-900 px-5 rounded add-to-cart-btn" data-name="Roots Crispy Fish"
+                            data-price="21.90">
+                            <i class="fa fa-cart-plus text-lg text-white"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
 
         </div>
 
