@@ -196,7 +196,7 @@ document.addEventListener("DOMContentLoaded", function () {
         }).join("");
 
         const message = encodeURI(cartItems);
-        const phone = "1981979935";
+        const phone = "";
         const fullMessage = `${message} <strong>Endereço:</strong> ${addressInput.value} | <strong>Forma de Pagamento:</strong> ${paymentMethod}`;
 
         window.open(`https://wa.me/${phone}?text=${fullMessage}`, "_blank");
@@ -210,7 +210,6 @@ document.addEventListener("DOMContentLoaded", function () {
     updateRestaurantStatus();
     updateDeliveryInfo();
 
-    // Atualizar a cada minuto
     setInterval(function () {
         updateRestaurantStatus();
         updateDeliveryInfo();
